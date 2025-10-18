@@ -500,8 +500,7 @@
       "course": "javascript",
       "title": "درس ۸ — کدهای ما کجا اجرا می‌شوند؟ اهمیت محل قرارگیری تگ <script>",
       "url": "/lessons/js/lesson-08.md"
-    }
-    ,
+    },
     {
       "id": "js-09",
       "course": "javascript",
@@ -513,15 +512,13 @@
       "course": "javascript",
       "title": "درس ۱۰ — جعبه‌های موقت ذخیره‌سازی: متغیرها با let و var",
       "url": "/lessons/js/lesson-10.md"
-    }
-    ,
+    },
     {
       "id": "js-11",
       "course": "javascript",
       "title": "درس ۱۱ — قوانین نام‌گذاری: انتخاب اسم‌های خوب و ممنوعه برای متغیرها",
       "url": "/lessons/js/lesson-11.md"
-    }
-    ,
+    },
     {
       "id": "js-12",
       "course": "javascript",

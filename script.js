@@ -1,13 +1,13 @@
 // ===== Config =====
-const BASE_PATH = window.location.pathname.replace(/\/[^/]*$/, '/') || '/';
-function resolveUrl(path = '') {
-  return `${window.location.origin}${BASE_PATH}${path.replace(/^\//, '')}`;
+const BASE_PATH = window.location.pathname.replace(/\/[^/]*$/, "/") || "/";
+function resolveUrl(path = "") {
+  return `${window.location.origin}${BASE_PATH}${path.replace(/^\//, "")}`;
 }
-const STRUCT_JSON = resolveUrl('assets/structure.json'); 
+const STRUCT_JSON = resolveUrl("assets/structure.json");
 
 // ===== State =====
-let SECTIONS = []; 
-let LESSONS = []; 
+let SECTIONS = [];
+let LESSONS = [];
 let CURRENT_COURSE = "";
 
 // ===== Elements =====
@@ -32,7 +32,8 @@ const getCourseById = (id) => {
   return null;
 };
 
-const getLessonsByCourse = (courseId) => LESSONS.filter((l) => l.course === courseId);
+const getLessonsByCourse = (courseId) =>
+  LESSONS.filter((l) => l.course === courseId);
 const getLessonById = (id) => LESSONS.find((l) => l.id === id);
 
 function parseHash() {
@@ -78,7 +79,10 @@ function renderMenu() {
 
 function showCourse(courseId) {
   const found = getCourseById(courseId);
-  if (!found) { showMenu(); return; }
+  if (!found) {
+    showMenu();
+    return;
+  }
   CURRENT_COURSE = courseId;
   menuView.hidden = true;
   courseView.hidden = false;
@@ -93,7 +97,9 @@ function renderLessonList(courseId) {
     const li = document.createElement("li");
     li.className = "lesson-item";
     const a = document.createElement("a");
-    a.href = `#course=${encodeURIComponent(courseId)}&lesson=${encodeURIComponent(item.id)}`;
+    a.href = `#course=${encodeURIComponent(
+      courseId
+    )}&lesson=${encodeURIComponent(item.id)}`;
     a.textContent = item.title || item.id;
     li.appendChild(a);
     listEl.appendChild(li);
@@ -104,7 +110,7 @@ async function renderMarkdown(url) {
   contentEl.innerHTML = '<p class="muted">در حال بارگذاری…</p>';
   try {
     // ✅ اینجا باید خودِ فایل درس رو بخونی، نه structure.json
-    const res = await fetch(resolveUrl(url), { cache: 'no-store' });
+    const res = await fetch(resolveUrl(url), { cache: "no-store" });
     if (!res.ok) throw new Error("خطا در دریافت فایل");
     const md = await res.text();
     const rawHtml = marked.parse(md, { mangle: false, headerIds: true });
@@ -127,8 +133,16 @@ async function showLesson(lessonId) {
 
   openRawBtn.onclick = () => window.open(resolveUrl(lesson.url), "_blank");
   copyBtn.onclick = async () => {
-    const link = `${location.origin}${location.pathname}#course=${encodeURIComponent(lesson.course)}&lesson=${encodeURIComponent(lesson.id)}`;
-    try { await navigator.clipboard.writeText(link); copyBtn.textContent = "کپی شد"; setTimeout(() => (copyBtn.textContent = "کپی لینک"), 1200); } catch {}
+    const link = `${location.origin}${
+      location.pathname
+    }#course=${encodeURIComponent(lesson.course)}&lesson=${encodeURIComponent(
+      lesson.id
+    )}`;
+    try {
+      await navigator.clipboard.writeText(link);
+      copyBtn.textContent = "کپی شد";
+      setTimeout(() => (copyBtn.textContent = "کپی لینک"), 1200);
+    } catch {}
   };
 
   await renderMarkdown(lesson.url);
@@ -136,18 +150,27 @@ async function showLesson(lessonId) {
 
 function applySearch() {
   const q = (searchEl.value || "").toLowerCase().trim();
-  if (!q) { const { course } = parseHash(); if (course) renderLessonList(course); else renderMenu(); return; }
+  if (!q) {
+    const { course } = parseHash();
+    if (course) renderLessonList(course);
+    else renderMenu();
+    return;
+  }
 
   if (CURRENT_COURSE) {
     const ls = getLessonsByCourse(CURRENT_COURSE).filter(
-      (l) => (l.title || "").toLowerCase().includes(q) || (l.id || "").toLowerCase().includes(q)
+      (l) =>
+        (l.title || "").toLowerCase().includes(q) ||
+        (l.id || "").toLowerCase().includes(q)
     );
     listEl.innerHTML = "";
     ls.forEach((item) => {
       const li = document.createElement("li");
       li.className = "lesson-item";
       const a = document.createElement("a");
-      a.href = `#course=${encodeURIComponent(CURRENT_COURSE)}&lesson=${encodeURIComponent(item.id)}`;
+      a.href = `#course=${encodeURIComponent(
+        CURRENT_COURSE
+      )}&lesson=${encodeURIComponent(item.id)}`;
       a.textContent = item.title || item.id;
       listEl.appendChild(li).appendChild(a);
     });
@@ -155,7 +178,9 @@ function applySearch() {
     menuView.innerHTML = "";
     SECTIONS.forEach((sec) => {
       const filteredCourses = (sec.courses || []).filter(
-        (c) => (c.title || "").toLowerCase().includes(q) || (c.id || "").toLowerCase().includes(q)
+        (c) =>
+          (c.title || "").toLowerCase().includes(q) ||
+          (c.id || "").toLowerCase().includes(q)
       );
       if (!filteredCourses.length) return;
       const card = document.createElement("div");
@@ -180,7 +205,7 @@ function applySearch() {
 async function init() {
   try {
     // ✅ اینجا باید STRUCT_JSON رو بخونی
-    const res = await fetch(STRUCT_JSON, { cache: 'no-store' });
+    const res = await fetch(STRUCT_JSON, { cache: "no-store" });
     if (!res.ok) throw new Error("نتوانستم ساختار منو را بخوانم.");
     const data = await res.json();
     SECTIONS = data.sections || [];
@@ -198,13 +223,24 @@ async function init() {
   if (course) showCourse(course);
   if (lesson) await showLesson(lesson);
 
-  backToMenuBtn.addEventListener("click", () => { setHash({}); showMenu(); renderMenu(); });
+  backToMenuBtn.addEventListener("click", () => {
+    setHash({});
+    showMenu();
+    renderMenu();
+  });
   window.addEventListener("hashchange", () => {
     const { course, lesson } = parseHash();
-    if (!course) { showMenu(); renderMenu(); return; }
+    if (!course) {
+      showMenu();
+      renderMenu();
+      return;
+    }
     showCourse(course);
     if (lesson) showLesson(lesson);
-    else { titleEl.textContent = "یک درس را انتخاب کنید…"; contentEl.innerHTML = ""; }
+    else {
+      titleEl.textContent = "یک درس را انتخاب کنید…";
+      contentEl.innerHTML = "";
+    }
   });
 
   searchEl.addEventListener("input", applySearch);
@@ -212,30 +248,22 @@ async function init() {
 
 init();
 // ===== Reader Mode =====
-(function(){
+(function () {
   const btn = document.getElementById("readerToggle");
   if (!btn) return;
-
   const STORAGE_KEY = "readerMode";
   const body = document.body;
-
-  
   if (localStorage.getItem(STORAGE_KEY) === "on") {
     body.classList.add("reader-mode");
     btn.textContent = "❌ خروج از حالت خواندن";
   }
-
- 
   btn.addEventListener("click", toggleReader);
-
- 
   window.addEventListener("keydown", (e) => {
     if (e.key.toLowerCase() === "r" && !e.ctrlKey && !e.altKey) {
       e.preventDefault();
       toggleReader();
     }
   });
-
   function toggleReader() {
     const active = body.classList.toggle("reader-mode");
     btn.textContent = active ? "❌ خروج از حالت خواندن" : "📰 حالت خواندن";

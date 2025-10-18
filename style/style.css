@@ -228,7 +228,9 @@ header h1 {
   justify-content: space-between;
   margin-bottom: 10px;
 }
+
 /* ================= Reader Mode ================= */
+
 body.reader-mode header,
 body.reader-mode .sidebar,
 body.reader-mode .toolbar button:not(#readerToggle) {
