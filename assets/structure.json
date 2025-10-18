@@ -454,10 +454,28 @@
       "url": "/lessons/git/lesson-06.md"
     },
     {
-      "id": "js-05",
+      "id": "js-01",
       "course": "javascript",
-      "title": "JavaScript — درس 05: توابع",
-      "url": "/lessons/javascript/lesson-05.md"
+      "title": "درس ۱ — برنامه‌نویسی چیست؟ چگونه با کامپیوتر صحبت کنیم؟ ",
+      "url": "/lessons/js/lesson-01.md"
+    },
+    {
+      "id": "js-02",
+      "course": "javascript",
+      "title": "درس ۲ — زبان‌های برنامه‌نویسی: مفسرها (Interpreter) و مترجم‌ها (Compiler)",
+      "url": "/lessons/js/lesson-02.md"
+    },
+    {
+      "id": "js-03",
+      "course": "javascript",
+      "title": "درس ۳ — نقشه‌های راه برنامه‌نویسی: الگوریتم‌ها و فلوچارت‌ها",
+      "url": "/lessons/js/lesson-03.md"
+    },
+    {
+      "id": "js-04",
+      "course": "javascript",
+      "title": "درس ۳ — نقشه‌های راه برنامه‌نویسی: الگوریتم‌ها و فلوچارت‌ها",
+      "url": "/lessons/js/lesson-04.md"
     }
   ]
 }
