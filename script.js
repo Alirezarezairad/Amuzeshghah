@@ -1,17 +1,13 @@
 // ===== Config =====
-
-const BASE = location.pathname.replace(/\/[^/]*$/, "/") || "/";
-
-const resolveUrl = (p = "") => {
-  const clean = p.replace(/^\//, "");
-  return location.origin + BASE + clean;
-};
-
-const STRUCT_JSON = resolveUrl("assets/structure.json"); // contains sections + lessons
+const BASE_PATH = window.location.pathname.replace(/\/[^/]*$/, '/') || '/';
+function resolveUrl(path = '') {
+  return `${window.location.origin}${BASE_PATH}${path.replace(/^\//, '')}`;
+}
+const STRUCT_JSON = resolveUrl('assets/structure.json'); 
 
 // ===== State =====
-let SECTIONS = []; // [{id,title,courses:[{id,title}]}]
-let LESSONS = []; // [{id,course,title,url}]
+let SECTIONS = []; 
+let LESSONS = []; 
 let CURRENT_COURSE = "";
 
 // ===== Elements =====
@@ -36,12 +32,10 @@ const getCourseById = (id) => {
   return null;
 };
 
-const getLessonsByCourse = (courseId) =>
-  LESSONS.filter((l) => l.course === courseId);
+const getLessonsByCourse = (courseId) => LESSONS.filter((l) => l.course === courseId);
 const getLessonById = (id) => LESSONS.find((l) => l.id === id);
 
 function parseHash() {
-  // support #course=html&lesson=html
   const hash = location.hash.replace(/^#/, "");
   const params = new URLSearchParams(hash);
   const course = params.get("course") || "";
@@ -63,7 +57,6 @@ function showMenu() {
 }
 
 function renderMenu() {
-  // Build sections + courses UI
   menuView.innerHTML = "";
   SECTIONS.forEach((sec) => {
     const card = document.createElement("div");
@@ -85,10 +78,7 @@ function renderMenu() {
 
 function showCourse(courseId) {
   const found = getCourseById(courseId);
-  if (!found) {
-    showMenu();
-    return;
-  }
+  if (!found) { showMenu(); return; }
   CURRENT_COURSE = courseId;
   menuView.hidden = true;
   courseView.hidden = false;
@@ -103,9 +93,7 @@ function renderLessonList(courseId) {
     const li = document.createElement("li");
     li.className = "lesson-item";
     const a = document.createElement("a");
-    a.href = `#course=${encodeURIComponent(
-      courseId
-    )}&lesson=${encodeURIComponent(item.id)}`;
+    a.href = `#course=${encodeURIComponent(courseId)}&lesson=${encodeURIComponent(item.id)}`;
     a.textContent = item.title || item.id;
     li.appendChild(a);
     listEl.appendChild(li);
@@ -115,7 +103,8 @@ function renderLessonList(courseId) {
 async function renderMarkdown(url) {
   contentEl.innerHTML = '<p class="muted">در حال بارگذاری…</p>';
   try {
-    const res = await fetch(resolveUrl(url), { cache: "no-store" });
+    // ✅ اینجا باید خودِ فایل درس رو بخونی، نه structure.json
+    const res = await fetch(resolveUrl(url), { cache: 'no-store' });
     if (!res.ok) throw new Error("خطا در دریافت فایل");
     const md = await res.text();
     const rawHtml = marked.parse(md, { mangle: false, headerIds: true });
@@ -129,66 +118,44 @@ async function renderMarkdown(url) {
 
 async function showLesson(lessonId) {
   const lesson = getLessonById(lessonId);
-  if (!lesson) {
-    return;
-  }
+  if (!lesson) return;
+
   const courseInfo = getCourseById(lesson.course);
-  if (courseInfo) {
-    titleEl.textContent = `${courseInfo.course.title} — ${lesson.title}`;
-  } else {
-    titleEl.textContent = lesson.title;
-  }
+  titleEl.textContent = courseInfo
+    ? `${courseInfo.course.title} — ${lesson.title}`
+    : lesson.title;
+
   openRawBtn.onclick = () => window.open(resolveUrl(lesson.url), "_blank");
   copyBtn.onclick = async () => {
-    const link = `${location.origin}${
-      location.pathname
-    }#course=${encodeURIComponent(lesson.course)}&lesson=${encodeURIComponent(
-      lesson.id
-    )}`;
-    try {
-      await navigator.clipboard.writeText(link);
-      copyBtn.textContent = "کپی شد";
-      setTimeout(() => (copyBtn.textContent = "کپی لینک"), 1200);
-    } catch {}
+    const link = `${location.origin}${location.pathname}#course=${encodeURIComponent(lesson.course)}&lesson=${encodeURIComponent(lesson.id)}`;
+    try { await navigator.clipboard.writeText(link); copyBtn.textContent = "کپی شد"; setTimeout(() => (copyBtn.textContent = "کپی لینک"), 1200); } catch {}
   };
+
   await renderMarkdown(lesson.url);
 }
 
 function applySearch() {
   const q = (searchEl.value || "").toLowerCase().trim();
-  if (!q) {
-    // No filter → re-render current view
-    const { course, lesson } = parseHash();
-    if (course) renderLessonList(course);
-    else renderMenu();
-    return;
-  }
-  // Filter courses and lessons by query (client-side)
+  if (!q) { const { course } = parseHash(); if (course) renderLessonList(course); else renderMenu(); return; }
+
   if (CURRENT_COURSE) {
     const ls = getLessonsByCourse(CURRENT_COURSE).filter(
-      (l) =>
-        (l.title || "").toLowerCase().includes(q) ||
-        (l.id || "").toLowerCase().includes(q)
+      (l) => (l.title || "").toLowerCase().includes(q) || (l.id || "").toLowerCase().includes(q)
     );
     listEl.innerHTML = "";
     ls.forEach((item) => {
       const li = document.createElement("li");
       li.className = "lesson-item";
       const a = document.createElement("a");
-      a.href = `#course=${encodeURIComponent(
-        CURRENT_COURSE
-      )}&lesson=${encodeURIComponent(item.id)}`;
+      a.href = `#course=${encodeURIComponent(CURRENT_COURSE)}&lesson=${encodeURIComponent(item.id)}`;
       a.textContent = item.title || item.id;
       listEl.appendChild(li).appendChild(a);
     });
   } else {
-    // Filter menu (courses)
     menuView.innerHTML = "";
     SECTIONS.forEach((sec) => {
       const filteredCourses = (sec.courses || []).filter(
-        (c) =>
-          (c.title || "").toLowerCase().includes(q) ||
-          (c.id || "").toLowerCase().includes(q)
+        (c) => (c.title || "").toLowerCase().includes(q) || (c.id || "").toLowerCase().includes(q)
       );
       if (!filteredCourses.length) return;
       const card = document.createElement("div");
@@ -212,16 +179,15 @@ function applySearch() {
 // ===== Init =====
 async function init() {
   try {
-    const res = await fetch(STRUCT_JSON, { cache: "no-store" });
+    // ✅ اینجا باید STRUCT_JSON رو بخونی
+    const res = await fetch(STRUCT_JSON, { cache: 'no-store' });
     if (!res.ok) throw new Error("نتوانستم ساختار منو را بخوانم.");
     const data = await res.json();
     SECTIONS = data.sections || [];
     LESSONS = data.lessons || [];
   } catch (err) {
-    document.getElementById("currentTitle").textContent = "خطا در بارگذاری";
-    document.getElementById(
-      "content"
-    ).innerHTML = `<p style="color:#ff8a8a">${err.message}</p>`;
+    titleEl.textContent = "خطا در بارگذاری";
+    contentEl.innerHTML = `<p style="color:#ff8a8a">${err.message}</p>`;
     return;
   }
 
@@ -229,31 +195,16 @@ async function init() {
   showMenu();
 
   const { course, lesson } = parseHash();
-  if (course) {
-    showCourse(course);
-  }
-  if (lesson) {
-    await showLesson(lesson);
-  }
+  if (course) showCourse(course);
+  if (lesson) await showLesson(lesson);
 
-  backToMenuBtn.addEventListener("click", () => {
-    setHash({});
-    showMenu();
-    renderMenu();
-  });
+  backToMenuBtn.addEventListener("click", () => { setHash({}); showMenu(); renderMenu(); });
   window.addEventListener("hashchange", () => {
     const { course, lesson } = parseHash();
-    if (!course) {
-      showMenu();
-      renderMenu();
-      return;
-    }
+    if (!course) { showMenu(); renderMenu(); return; }
     showCourse(course);
     if (lesson) showLesson(lesson);
-    else {
-      titleEl.textContent = "یک درس را انتخاب کنید…";
-      contentEl.innerHTML = "";
-    }
+    else { titleEl.textContent = "یک درس را انتخاب کنید…"; contentEl.innerHTML = ""; }
   });
 
   searchEl.addEventListener("input", applySearch);
