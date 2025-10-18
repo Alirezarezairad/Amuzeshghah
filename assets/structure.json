@@ -1,0 +1,463 @@
+{
+  "sections": [
+    {
+      "id": "frontend",
+      "title": "Frontend",
+      "courses": [
+        { "id": "html", "title": "HTML" },
+        { "id": "css", "title": "CSS" },
+        { "id": "javascript", "title": "JavaScript" },
+        { "id": "react", "title": "React" },
+        { "id": "git&github", "title": "Git & GitHub" }
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "Backend",
+      "courses": [
+        { "id": "nodejs", "title": "Node.js" },
+        { "id": "express", "title": "Express" },
+        { "id": "mongodb", "title": "MongoDB" }
+      ]
+    },
+    {
+      "id": "library",
+      "title": "Library",
+      "courses": [
+        { "id": "bootstrap", "title": "Bootstrap" },
+        { "id": "tailwindcss", "title": "TailwindCSS" },
+        { "id": "socketio", "title": "Socket.IO" },
+        { "id": "nextjs", "title": "Next.js" },
+        { "id": "typescript", "title": "TypeScript" }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "html-01",
+      "course": "html",
+      "title": "درس اول: HTML چیه؟ دقیقاً کارش چیه؟ ",
+      "url": "/lessons/html/lesson-01.md"
+    },
+    {
+      "id": "html-02",
+      "course": "html",
+      "title": "درس دوم: ساختار کلی یک صفحه‌ی HTML",
+      "url": "/lessons/html/lesson-02.md"
+    },
+    {
+      "id": "html-03",
+      "course": "html",
+      "title": "درس سوم: تگ‌های متنی در HTML",
+      "url": "/lessons/html/lesson-03.md"
+    },
+    {
+      "id": "html-04",
+      "course": "html",
+      "title": "درس چهارم: لینک‌ها در HTML",
+      "url": "/lessons/html/lesson-04.md"
+    },
+    {
+      "id": "html-05",
+      "course": "html",
+      "title": "درس پنجم: افزودن تصویر به صفحه‌ی HTML",
+      "url": "/lessons/html/lesson-05.md"
+    },
+    {
+      "id": "html-06",
+      "course": "html",
+      "title": "درس ششم: ساخت لیست در HTML",
+      "url": "/lessons/html/lesson-06.md"
+    },
+    {
+      "id": "html-07",
+      "course": "html",
+      "title": "درس هفتم: ساخت جدول در HTML",
+      "url": "/lessons/html/lesson-07.md"
+    },
+    {
+      "id": "html-08",
+      "course": "html",
+      "title": "درس هشتم: ساخت فرم در HTML",
+      "url": "/lessons/html/lesson-08.md"
+    },
+    {
+      "id": "html-09",
+      "course": "html",
+      "title": "درس نهم: ویژگی‌های تگ‌ها (Attributes) در HTML",
+      "url": "/lessons/html/lesson-09.md"
+    },
+    {
+      "id": "html-10",
+      "course": "html",
+      "title": "درس دهم: کامنت‌گذاری و نظم در HTML",
+      "url": "/lessons/html/lesson-10.md"
+    },
+    {
+      "id": "html-11",
+      "course": "html",
+      "title": "درس یازدهم: تگ‌های معنایی (Semantic Tags) در HTML",
+      "url": "/lessons/html/lesson-11.md"
+    },
+    {
+      "id": "html-12",
+      "course": "html",
+      "title": "درس دوازدهم: پروژه‌ی مینی – ساخت یک صفحه‌ی واقعی با HTML",
+      "url": "/lessons/html/lesson-12.md"
+    },
+    {
+      "id": "html-13",
+      "course": "html",
+      "title": "درس سیزدهم: نمایش ویدیو و موزیک در HTML",
+      "url": "/lessons/html/lesson-13.md"
+    },
+    {
+      "id": "html-14",
+      "course": "html",
+      "title": "درس چهاردهم: iframe، نقشه، و جاسازی صفحات دیگر در HTML",
+      "url": "/lessons/html/lesson-14.md"
+    },
+    {
+      "id": "html-15",
+      "course": "html",
+      "title": "درس پانزدهم: متا تگ‌ها در HTML و شروع سئو (SEO Basics)",
+      "url": "/lessons/html/lesson-15.md"
+    },
+    {
+      "id": "html-16",
+      "course": "html",
+      "title": "درس شانزدهم: تگ‌های منسوخ (Deprecated) در HTML",
+      "url": "/lessons/html/lesson-16.md"
+    },
+    {
+      "id": "html-17",
+      "course": "html",
+      "title": "درس هفدهم: ساخت صفحات چندگانه و لینک‌ دادن بین صفحات",
+      "url": "/lessons/html/lesson-17.md"
+    },
+    {
+      "id": "html-18",
+      "course": "html",
+      "title": "درس هجدهم: طراحی واکنش‌گرا (Responsive Design) در HTML",
+      "url": "/lessons/html/lesson-18.md"
+    },
+    {
+      "id": "html-19",
+      "course": "html",
+      "title": "درس نوزدهم: ساخت قالب اصلی سایت با بخش‌های تکرارشونده در HTML",
+      "url": "/lessons/html/lesson-19.md"
+    },
+    {
+      "id": "html-20",
+      "course": "html",
+      "title": "درس بیستم: ساخت گالری تصاویر در HTML",
+      "url": "/lessons/html/lesson-20.md"
+    },
+    {
+      "id": "html-21",
+      "course": "html",
+      "title": "درس بیست‌ویکم: افزودن لینک روی عکس، ساخت دکمه تصویری و بنر کلیک‌پذیر در HTML",
+      "url": "/lessons/html/lesson-21.md"
+    },
+    {
+      "id": "html-22",
+      "course": "html",
+      "title": "درس بیست‌ودوم: لینک دانلود فایل در HTML",
+      "url": "/lessons/html/lesson-22.md"
+    },
+    {
+      "id": "html-23",
+      "course": "html",
+      "title": "درس بیست‌وسوم: ساخت دکمه در HTMLL",
+      "url": "/lessons/html/lesson-23.md"
+    },
+    {
+      "id": "html-24",
+      "course": "html",
+      "title": "درس بیست‌وچهارم: تگ‌های معنایی مخصوص فرم‌ها در HTML",
+      "url": "/lessons/html/lesson-24.md"
+    },
+    {
+      "id": "html-25",
+      "course": "html",
+      "title": "درس بیست‌وپنجم: اعتبارسنجی (Validation) فرم در HTML",
+      "url": "/lessons/html/lesson-25.md"
+    },
+    {
+      "id": "html-26",
+      "course": "html",
+      "title": "درس بیست‌وششم: ساخت فرم چندبخشی در HTML",
+      "url": "/lessons/html/lesson-26.md"
+    },
+    {
+      "id": "html-27",
+      "course": "html",
+      "title": "درس بیست‌وهفتم: ساخت صفحه‌ی 404 در HTML",
+      "url": "/lessons/html/lesson-27.md"
+    },
+    {
+      "id": "html-28",
+      "course": "html",
+      "title": "درس بیست‌وهشتم: ساخت جدول زمان‌بندی، جدول قیمت یا پلن خدمات در HTML",
+      "url": "/lessons/html/lesson-28.md"
+    },
+    {
+      "id": "html-29",
+      "course": "html",
+      "title": "درس بیست‌ونهم: ساخت نوار وضعیت (Progress Bar) و نمایش میزان پیشرفت در HTML",
+      "url": "/lessons/html/lesson-29.md"
+    },
+    {
+      "id": "html-30",
+      "course": "html",
+      "title": "درس سی‌ام: ساخت نوار ناوبری (Navigation Bar) در HTML",
+      "url": "/lessons/html/lesson-30.md"
+    },
+    {
+      "id": "html-31",
+      "course": "html",
+      "title": "درس سی‌ویکم: ساخت فوتر (Footer) حرفه‌ای در HTML",
+      "url": "/lessons/html/lesson-31.md"
+    },
+    {
+      "id": "html-32",
+      "course": "html",
+      "title": "درس سی‌ودوم: ساخت ساختار چندزبانه (Multi-language) در HTML ",
+      "url": "/lessons/html/lesson-32.md"
+    },
+    {
+      "id": "html-33",
+      "course": "html",
+      "title": "درس سی‌وسوم: ساخت منوی کشویی (Dropdown Menu) در HTML ",
+      "url": "/lessons/html/lesson-33.md"
+    },
+    {
+      "id": "html-34",
+      "course": "html",
+      "title": "درس سی‌وچهارم: ساخت لیست آیکون‌دار، علامت‌دار و معنایی (Semantic List) در HTML",
+      "url": "/lessons/html/lesson-34.md"
+    },
+    {
+      "id": "html-35",
+      "course": "html",
+      "title": "درس سی‌وپنجم: ساخت بنر تبلیغاتی / معرفی در HTML",
+      "url": "/lessons/html/lesson-35.md"
+    },
+    {
+      "id": "html-36",
+      "course": "html",
+      "title": "Final-Projekt: ساخت یک سایت واقعی با HTML",
+      "url": "/lessons/html/lesson-36.md"
+    },
+    {
+      "id": "css-01",
+      "course": "css",
+      "title": "درس 1: CSS چیست و چه کاربردی دارد؟ ",
+      "url": "/lessons/css/lesson-01.md"
+    },
+    {
+      "id": "css-02",
+      "course": "css",
+      "title": "درس 2: انواع روش‌های نوشتن CSS",
+      "url": "/lessons/css/lesson-02.md"
+    },
+    {
+      "id": "css-03",
+      "course": "css",
+      "title": "درس 3: Selectors در CSS — انتخاب‌گرها",
+      "url": "/lessons/css/lesson-03.md"
+    },
+    {
+      "id": "css-04",
+      "course": "css",
+      "title": " درس 4: رنگ‌ها و پس‌زمینه‌ها در CSS",
+      "url": "/lessons/css/lesson-04.md"
+    },
+    {
+      "id": "css-05",
+      "course": "css",
+      "title": " درس 5: واحدها در CSS",
+      "url": "/lessons/css/lesson-05.md"
+    },
+    {
+      "id": "css-06",
+      "course": "css",
+      "title": " درس 6: فونت‌ها و استایل‌دهی به متن در CSS",
+      "url": "/lessons/css/lesson-06.md"
+    },
+    {
+      "id": "css-07",
+      "course": "css",
+      "title": " درس 7: Box Model در CSS",
+      "url": "/lessons/css/lesson-07.md"
+    },
+    {
+      "id": "css-08",
+      "course": "css",
+      "title": "درس 8: margin, padding, border — کنترل حرفه‌ای فواصل و قاب‌ها",
+      "url": "/lessons/css/lesson-08.md"
+    },
+    {
+      "id": "css-09",
+      "course": "css",
+      "title": "درس 9: خاصیت display در CSS",
+      "url": "/lessons/css/lesson-09.md"
+    },
+    {
+      "id": "css-10",
+      "course": "css",
+      "title": "درس 10: position در CSS",
+      "url": "/lessons/css/lesson-10.md"
+    },
+    {
+      "id": "css-11",
+      "course": "css",
+      "title": "درس 11: استایل‌دهی به لینک‌ها و دکمه‌ها در CSS",
+      "url": "/lessons/css/lesson-11.md"
+    },
+    {
+      "id": "css-12",
+      "course": "css",
+      "title": "درس 12: استایل‌دهی به فرم‌ها و inputها در CSS",
+      "url": "/lessons/css/lesson-12.md"
+    },
+    {
+      "id": "css-13",
+      "course": "css",
+      "title": "درس 13: Pseudo-Class ها در CSS",
+      "url": "/lessons/css/lesson-13.md"
+    },
+    {
+      "id": "css-14",
+      "course": "css",
+      "title": "درس 14: ساخت منوی ساده با CSS",
+      "url": "/lessons/css/lesson-14.md"
+    },
+    {
+      "id": "css-15",
+      "course": "css",
+      "title": "درس 15: پروژه عملی – ساخت فرم لاگین حرفه‌ای با HTML و CSS",
+      "url": "/lessons/css/lesson-15.md"
+    },
+    {
+      "id": "css-16",
+      "course": "css",
+      "title": "درس 16: Flexbox پیشرفته در CSS",
+      "url": "/lessons/css/lesson-16.md"
+    },
+    {
+      "id": "css-17",
+      "course": "css",
+      "title": "درس 17: Grid پیشرفته در CSS",
+      "url": "/lessons/css/lesson-17.md"
+    },
+    {
+      "id": "css-18",
+      "course": "css",
+      "title": "درس 18: ترکیب Grid و Flex در CSS",
+      "url": "/lessons/css/lesson-18.md"
+    },
+    {
+      "id": "css-19",
+      "course": "css",
+      "title": "درس 19: CSS Variables – تعریف و استفاده از متغیرها در CSS",
+      "url": "/lessons/css/lesson-19.md"
+    },
+    {
+      "id": "css-20",
+      "course": "css",
+      "title": "درس 20: افکت‌های Shadow در CSS ",
+      "url": "/lessons/css/lesson-20.md"
+    },
+    {
+      "id": "css-21",
+      "course": "css",
+      "title": "درس 21: transition و animation در CSS ",
+      "url": "/lessons/css/lesson-21.md"
+    },
+    {
+      "id": "css-22",
+      "course": "css",
+      "title": "درس 22: طراحی دکمه‌های متحرک با CSS ",
+      "url": "/lessons/css/lesson-22.md"
+    },
+    {
+      "id": "css-23",
+      "course": "css",
+      "title": "درس 23: طراحی ریسپانسیو با CSS ",
+      "url": "/lessons/css/lesson-23.md"
+    },
+    {
+      "id": "css-24",
+      "course": "css",
+      "title": "درس 24: Media Queries پیشرفته در CSS ",
+      "url": "/lessons/css/lesson-24.md"
+    },
+    {
+      "id": "css-25",
+      "course": "css",
+      "title": "درس 25: استایل‌دهی حرفه‌ای به تصاویر در CSS ",
+      "url": "/lessons/css/lesson-25.md"
+    },
+    {
+      "id": "css-26",
+      "course": "css",
+      "title": "درس 26: افکت پارالاکس در CSS ",
+      "url": "/lessons/css/lesson-26.md"
+    },
+    {
+      "id": "css-27",
+      "course": "css",
+      "title": "درس 27: فرم‌های حرفه‌ای در CSS ",
+      "url": "/lessons/css/lesson-27.md"
+    },
+    {
+      "id": "css-28",
+      "course": "css",
+      "title": "درس 28: clip-path و blend-mode در CSS ",
+      "url": "/lessons/css/lesson-28.md"
+    },
+    {
+      "id": "git&github-01",
+      "course": "git&github",
+      "title": " درس ۱ — نصب و راه‌اندازی Git",
+      "url": "/lessons/git/lesson-01.md"
+    },
+    {
+      "id": "git&github-02",
+      "course": "git&github",
+      "title": "درس ۲ — مفاهیم و دستورات پایه در Git",
+      "url": "/lessons/git/lesson-02.md"
+    },
+    {
+      "id": "git&github-03",
+      "course": "git&github",
+      "title": "درس ۳ — ساخت SSH Key و اتصال به GitHub",
+      "url": "/lessons/git/lesson-03.md"
+    },
+    {
+      "id": "git&github-04",
+      "course": "git&github",
+      "title": "درس ۴ — شاخه‌ها (Branches)، ادغام (Merge) و بازنویسی (Rebase)",
+      "url": "/lessons/git/lesson-04.md"
+    },
+    {
+      "id": "git&github-05",
+      "course": "git&github",
+      "title": "درس ۵ — دستورات پیشرفته Git (برگشت، اصلاح و نجات پروژه)",
+      "url": "/lessons/git/lesson-05.md"
+    },
+    {
+      "id": "git&github-06",
+      "course": "git&github",
+      "title": "درس ۶ — خودکارسازی با GitHub Actions (CI/CD)",
+      "url": "/lessons/git/lesson-06.md"
+    },
+    {
+      "id": "js-05",
+      "course": "javascript",
+      "title": "JavaScript — درس 05: توابع",
+      "url": "/lessons/javascript/lesson-05.md"
+    }
+  ]
+}

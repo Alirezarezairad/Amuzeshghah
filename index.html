@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./style/style.css">
+  <title>آموزشگاه آی تی</title>
+  <meta name="description" content="منوی دسته‌بندی‌شده ➝ انتخاب دوره ➝ نمایش درس‌های Markdown" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1> به آموزشگاه خوش آمدی</h1>
+      <div class="search"><input id="search" type="search" placeholder="جستجو در دوره/درس…" /></div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <div id="menuView" hidden>
+          <!-- Sections + Courses menu injected here -->
+        </div>
+        <div id="courseView" hidden>
+          <button id="backToMenu" class="btn" style="margin:8px 6px 12px">⬅️ بازگشت به منو</button>
+          <h3 id="courseTitle" style="margin:0 6px 10px" class="muted"></h3>
+          <ul id="lessonList" class="lesson-list" aria-label="لیست درس‌ها"></ul>
+        </div>
+        
+      </aside>
+
+      <main class="viewer">
+        <div class="toolbar">
+          <div id="currentTitle" class="muted">از منو یک دوره انتخاب کنید…</div>
+          <div style="display:flex; gap:8px; align-items:center">
+            <button id="openRaw" class="btn" title="باز کردن فایل اصلی">باز کردن فایل</button>
+            <button id="copyLink" class="btn" title="کپی لینک مستقیم">کپی لینک</button>
+          </div>
+        </div>
+        <article id="content" class="prose" aria-live="polite"></article>
+      </main>
+    </div>
+  </div>
+
+  <!-- Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js"></script>
+  <script type="module" src="./script/script.js"></script>
+</body>
+</html>
