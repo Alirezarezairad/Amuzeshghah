@@ -514,5 +514,19 @@
       "title": "درس ۱۰ — جعبه‌های موقت ذخیره‌سازی: متغیرها با let و var",
       "url": "/lessons/js/lesson-10.md"
     }
+    ,
+    {
+      "id": "js-11",
+      "course": "javascript",
+      "title": "درس ۱۱ — قوانین نام‌گذاری: انتخاب اسم‌های خوب و ممنوعه برای متغیرها",
+      "url": "/lessons/js/lesson-11.md"
+    }
+    ,
+    {
+      "id": "js-12",
+      "course": "javascript",
+      "title": " درس ۱۲ — جعبه‌های قفل‌دار: ثابت‌ها با کلمهٔ کلیدی const ",
+      "url": "/lessons/js/lesson-12.md"
+    }
   ]
 }
