@@ -476,6 +476,43 @@
       "course": "javascript",
       "title": "درس ۴ — تولد جاوا اسکریپت و کاربردهای شگفت‌انگیز آن",
       "url": "/lessons/js/lesson-04.md"
+    },
+    {
+      "id": "js-05",
+      "course": "javascript",
+      "title": " درس ۵ — تیم سه‌نفره وب: HTML، CSS و جاوا اسکریپت چطور کار می‌کنند؟",
+      "url": "/lessons/js/lesson-05.md"
+    },
+    {
+      "id": "js-06",
+      "course": "javascript",
+      "title": " درس ۶ — انتخاب قلم و دفتر برنامه‌نویسی: بهترین ابزارهای کدنویسی ",
+      "url": "/lessons/js/lesson-06.md"
+    },
+    {
+      "id": "js-07",
+      "course": "javascript",
+      "title": "درس ۷ — اتصال جاوااسکریپت به HTML با <script>",
+      "url": "/lessons/js/lesson-07.md"
+    },
+    {
+      "id": "js-08",
+      "course": "javascript",
+      "title": "درس ۸ — کدهای ما کجا اجرا می‌شوند؟ اهمیت محل قرارگیری تگ <script>",
+      "url": "/lessons/js/lesson-08.md"
+    }
+    ,
+    {
+      "id": "js-09",
+      "course": "javascript",
+      "title": "درس ۹ — تولید خروجی: پنجره‌های گفتگوی استاندارد (Alert, Prompt, Confirm)",
+      "url": "/lessons/js/lesson-09.md"
+    },
+    {
+      "id": "js-10",
+      "course": "javascript",
+      "title": "درس ۱۰ — جعبه‌های موقت ذخیره‌سازی: متغیرها با let و var",
+      "url": "/lessons/js/lesson-10.md"
     }
   ]
 }
