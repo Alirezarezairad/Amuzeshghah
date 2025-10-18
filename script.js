@@ -211,3 +211,34 @@ async function init() {
 }
 
 init();
+// ===== Reader Mode =====
+(function(){
+  const btn = document.getElementById("readerToggle");
+  if (!btn) return;
+
+  const STORAGE_KEY = "readerMode";
+  const body = document.body;
+
+  
+  if (localStorage.getItem(STORAGE_KEY) === "on") {
+    body.classList.add("reader-mode");
+    btn.textContent = "❌ خروج از حالت خواندن";
+  }
+
+ 
+  btn.addEventListener("click", toggleReader);
+
+ 
+  window.addEventListener("keydown", (e) => {
+    if (e.key.toLowerCase() === "r" && !e.ctrlKey && !e.altKey) {
+      e.preventDefault();
+      toggleReader();
+    }
+  });
+
+  function toggleReader() {
+    const active = body.classList.toggle("reader-mode");
+    btn.textContent = active ? "❌ خروج از حالت خواندن" : "📰 حالت خواندن";
+    localStorage.setItem(STORAGE_KEY, active ? "on" : "off");
+  }
+})();

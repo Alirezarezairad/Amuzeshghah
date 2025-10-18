@@ -228,3 +228,46 @@ header h1 {
   justify-content: space-between;
   margin-bottom: 10px;
 }
+/* ================= Reader Mode ================= */
+body.reader-mode header,
+body.reader-mode .sidebar,
+body.reader-mode .toolbar button:not(#readerToggle) {
+  display: none !important;
+}
+
+body.reader-mode .layout {
+  grid-template-columns: 1fr !important;
+}
+
+body.reader-mode main.viewer {
+  background: #0b0b0b;
+  color: #eaeaea;
+  border-radius: 20px;
+  padding: 40px;
+  line-height: 2;
+  font-size: 1.1rem;
+  max-width: 75ch;
+  margin: 0 auto;
+}
+
+
+body.reader-mode #readerToggle {
+  display: inline-block !important;
+  background: #222;
+  border-color: #444;
+  box-shadow: 0 0 0 2px #4ea1ff55 inset;
+}
+
+
+body.reader-mode a {
+  color: #4ea1ff;
+  text-decoration: underline;
+}
+
+
+@media (prefers-color-scheme: light) {
+  body.reader-mode main.viewer {
+    background: #06090d;
+    color: #111;
+  }
+}
