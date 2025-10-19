@@ -457,43 +457,43 @@
       "id": "js-01",
       "course": "javascript",
       "title": " درس 1: انواع داده در JavaScript",
-      "url": "/lessons/js/Lesson-01.md"
+      "url": "/lessons/js/lesson-01.md"
     },
     {
       "id": "js-02",
       "course": "javascript",
       "title": " درس 2: تفاوت کپی آبجکت و آرایه در جاوااسکریپت",
-      "url": "/lessons/js/Lesson-02.md"
+      "url": "/lessons/js/lesson-02.md"
     },
     {
       "id": "js-03",
       "course": "javascript",
       "title": "  درس ۳ — عملگرهای عددی و شیء Math در JavaScript ",
-      "url": "/lessons/js/Lesson-03.md"
+      "url": "/lessons/js/lesson-03.md"
     },
     {
       "id": "js-04",
       "course": "javascript",
       "title": "درس ۴ — متدهای پرکاربرد روی آرایه‌ها در JavaScript ",
-      "url": "/lessons/js/Lesson-04.md"
+      "url": "/lessons/js/lesson-04.md"
     },
     {
       "id": "js-05",
       "course": "javascript",
       "title": "درس ۵ — کار با رشته‌ها (Strings) در JavaScript",
-      "url": "/lessons/js/Lesson-05.md"
+      "url": "/lessons/js/lesson-05.md"
     },
     {
       "id": "js-06",
       "course": "javascript",
       "title": " درس ۶ — عملگرهای مقایسه‌ای در JavaScript",
-      "url": "/lessons/js/Lesson-06.md"
+      "url": "/lessons/js/lesson-06.md"
     },
     {
       "id": "js-07",
       "course": "javascript",
       "title": "درس ۷ — شرط‌ها در جاوااسکریپت",
-      "url": "/lessons/js/Lesson-07.md"
+      "url": "/lessons/js/lesson-07.md"
     },
     {
       "id": "js-08",
