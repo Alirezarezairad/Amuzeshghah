@@ -498,7 +498,7 @@
     {
       "id": "js-08",
       "course": "javascript",
-      "title": "درس ۸ — کدهای ما کجا اجرا می‌شوند؟ اهمیت محل قرارگیری تگ <script>",
+      "title": "درس ۸ — مدیریت خطا (Error Handling) در JavaScript",
       "url": "/lessons/js/lesson-08.md"
     },
     {
