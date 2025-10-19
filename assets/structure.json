@@ -524,6 +524,24 @@
       "course": "javascript",
       "title": " درس ۱۲ — جعبه‌های قفل‌دار: ثابت‌ها با کلمهٔ کلیدی const ",
       "url": "/lessons/js/lesson-12.md"
+    },
+    {
+      "id": "js-13",
+      "course": "javascript",
+      "title": "درس ۱۳ — متغیرها (Variable) با let و var: ذخیره‌سازی موقت داده‌ها",
+      "url": "/lessons/js/lesson-13.md"
+    },
+    {
+      "id": "js-14",
+      "course": "javascript",
+      "title": "درس ۱۴ — قوانین نام‌گذاری و کلمات کلیدی رزرو‌شده  ",
+      "url": "/lessons/js/lesson-14.md"
+    },
+    {
+      "id": "js-15",
+      "course": "javascript",
+      "title": "درس ۱۵ — ثابت‌ها (Constant) با const: مقادیر تغییرناپذیر",
+      "url": "/lessons/js/lesson-15.md"
     }
   ]
 }
