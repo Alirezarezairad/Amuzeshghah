@@ -542,34 +542,36 @@
       "course": "javascript",
       "title": "درس ۱۵ — ثابت‌ها (Constant) با const: مقادیر تغییرناپذیر",
       "url": "/lessons/js/lesson-15.md"
-    }
-    ,
+    },
     {
       "id": "js-16",
       "course": "javascript",
       "title": "  درس ۱۶ — اعداد و انواع دادهٔ عددی  ",
       "url": "/lessons/js/lesson-16.md"
-    }
-    ,
+    },
     {
       "id": "js-17",
       "course": "javascript",
       "title": " درس ۱۷ — رشته‌ها و توالی‌های فرار (Escape Sequences)",
       "url": "/lessons/js/lesson-17.md"
-    }
-    ,
+    },
     {
       "id": "js-18",
       "course": "javascript",
       "title": "درس ۱۸ — مقادیر بولین (Boolean)",
       "url": "/lessons/js/lesson-18.md"
-    }
-    ,
+    },
     {
       "id": "js-19",
       "course": "javascript",
       "title": "درس ۱۹ — تفاوت null و undefined (مقادیر خالی/از دست رفته)",
       "url": "/lessons/js/lesson-19.md"
+    },
+    {
+      "id": "js-20",
+      "course": "javascript",
+      "title": " درس ۲۰ — آرایه‌ها (Arrays) و لیست‌های مرتب ",
+      "url": "/lessons/js/lesson-20.md"
     }
   ]
 }
