@@ -543,5 +543,12 @@
       "title": "درس ۱۵ — ثابت‌ها (Constant) با const: مقادیر تغییرناپذیر",
       "url": "/lessons/js/lesson-15.md"
     }
+    ,
+    {
+      "id": "js-16",
+      "course": "javascript",
+      "title": " درس ۱۶ — اعداد و انواع دادهٔ عددی ",
+      "url": "/lessons/js/lesson-16.md"
+    }
   ]
 }
