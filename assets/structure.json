@@ -547,15 +547,22 @@
     {
       "id": "js-16",
       "course": "javascript",
-      "title": "  درس ۱۷ — رشته‌ها و توالی‌های فرار (Escape Sequences) ",
+      "title": "  درس ۱۶ — اعداد و انواع دادهٔ عددی  ",
       "url": "/lessons/js/lesson-16.md"
     }
     ,
     {
       "id": "js-17",
       "course": "javascript",
-      "title": " درس ۱۶ — اعداد و انواع دادهٔ عددی ",
+      "title": " درس ۱۷ — رشته‌ها و توالی‌های فرار (Escape Sequences)",
       "url": "/lessons/js/lesson-17.md"
+    }
+    ,
+    {
+      "id": "js-18",
+      "course": "javascript",
+      "title": "درس ۱۸ — مقادیر بولین (Boolean)",
+      "url": "/lessons/js/lesson-18.md"
     }
   ]
 }
