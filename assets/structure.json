@@ -564,5 +564,12 @@
       "title": "درس ۱۸ — مقادیر بولین (Boolean)",
       "url": "/lessons/js/lesson-18.md"
     }
+    ,
+    {
+      "id": "js-19",
+      "course": "javascript",
+      "title": "درس ۱۹ — تفاوت null و undefined (مقادیر خالی/از دست رفته)",
+      "url": "/lessons/js/lesson-19.md"
+    }
   ]
 }
